@@ -5,7 +5,7 @@ const Logo = (props) => {
     <div>
       <header>
         <h1>Welcome to the {props.appName}</h1>
-        <img src='https://i.ibb.co/wYZy13z/charmander.png' alt='Charmander'></img>
+        <img onClick={props.handleClick} src='https://i.ibb.co/wYZy13z/charmander.png' alt='Charmander'></img>
       </header>
     </div>
   );
