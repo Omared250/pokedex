@@ -1,17 +1,24 @@
 import { useState } from "react";
 
-const CaughtPokemon = () => {
-  const date = new Date().toLocaleDateString();
+const CaughtPokemon = (props) => {
 
-  const [caught, setCaught] = useState(0);
+  const pokemons = ['Bulbasaur', 'Ivysaur', 'Charizard', 'Alakazam']
+  const random = Math.floor(Math.random() * pokemons.length)
+
+  const [caught, setCaught] = useState([]);
 
   const catchPokemon = () => {
-    setCaught(caught + 1)
+    setCaught(caught.concat(pokemons[random]))
   }
 
   return (<div>
-    <p>Caught {caught} Pokémon on {date}</p>
-    <button onClick={catchPokemon}>catch</button>
+    <p>Caught {caught.length} Pokémon on {props.date}</p>
+    <ul>
+      {caught.map((pokemon, index) => {
+        return <li key={index}>{pokemon}</li>
+      })}
+    </ul>
+    <button onClick={catchPokemon}>catch a Pokemon!</button>
   </div>
   );
 }
