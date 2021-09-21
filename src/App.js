@@ -1,7 +1,8 @@
 import Logo from './Logo';
 import BestPokemon from './BestPokemon';
 import CaughtPokemon from './CaughtPokemon';
-import PokemonMoves from './PokemonMoves';
+// import PokemonMoves from './PokemonMoves';
+import PokemonMovesSelector from './PokemonMovesSelector';
 
 const App = () => {
 
@@ -22,7 +23,7 @@ const App = () => {
       <Logo appName={'Pokedex'} />
       <BestPokemon name={'Charmander'} abilities={['Anticipation', 'Adaptability', 'Run-Away', 'Fire', 'Fire']} />
       <CaughtPokemon date={new Date().toLocaleDateString()} />
-      <PokemonMoves />
+      <PokemonMovesSelector />
     </div>
   );
 }
