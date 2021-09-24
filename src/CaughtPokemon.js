@@ -29,7 +29,7 @@ const CaughtPokemon = (props) => {
     <p>Caught {caught.length} Pokémon on {props.date}</p>
     <ul>
       {caught.map((pokemon, index) => {
-        return <li key={index}>{pokemon === '' ? window.alert('You need a pokemon name!') : pokemon}</li>
+        return <li key={index}>{!pokemon ? window.alert('You need a pokemon name!') : pokemon}</li>
       })}
     </ul>
     <input type='text'
