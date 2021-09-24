@@ -6,7 +6,7 @@ function PokemonMoves(props) {
 
     useEffect(() => {
         fetch(
-            `https://pokeapi.co/api/v2/pokemon/${props.pokemonId}`
+            `https://pokeapi.co/api/v2/pokemon/${props.pokemonId}/`
         )
             .then((res) => res.json())
             .then((data) => {
