@@ -3,6 +3,7 @@ import BestPokemon from './BestPokemon';
 import CaughtPokemon from './CaughtPokemon';
 // import PokemonMoves from './PokemonMoves';
 import PokemonMovesSelector from './PokemonMovesSelector';
+import PokemonCity from './PokemonCity';
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
       <BestPokemon name={'Charmander'} abilities={['Anticipation', 'Adaptability', 'Run-Away', 'Fire', 'Fire']} />
       <CaughtPokemon date={new Date().toLocaleDateString()} />
       <PokemonMovesSelector />
+      <PokemonCity />
     </div>
   );
 }
